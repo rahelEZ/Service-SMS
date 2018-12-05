@@ -1,0 +1,45 @@
+ <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        
+                        <div class="body">
+						<h2 class="card-inside-title">Incoming and Outgoing numbers</h2>
+                            <div class="row clearfix">
+                                <div class="col-sm-6">
+                                    <select class="form-control show-tick" name="edincoming">
+                                        <option value="<?php echo $tcategory->get_attribute_value("incoming",$edcategory_id); ?>"><?php echo $tcategory->get_attribute_value("incoming",$edcategory_id); ?>"</option>
+										<?php		
+											foreach($all_numbers as $anumber){
+												$list_number= $tshort->get_attribute_value("number",$anumber);
+												if($onum == $list_number){ ?>
+										<option disabled value ="<?php echo $onum; ?>"><?php echo $onum; ?></option>
+											<?php } 
+												else { ?>
+										<option value="<?php echo $anumber; ?>"><?php echo $list_number; ?></option>
+											<?php } } ?>
+										
+                                    </select>
+                                </div>
+                            </div>
+							<div class="row clearfix">
+                                <div class="col-sm-6">
+                                    <select class="form-control show-tick" name="edoutgoing">
+                                        <option value="<?php echo $tcategory->get_attribute_value("outgoing",$edcategory_id); ?>"><?php $a=$tcategory->get_attribute_value("incoming",$edcategory_id); 
+										echo $tshort->get_attribute_value("number",$a)?>"</option>
+										<?php		
+											foreach($all_numbers as $anumber){
+												$list_number= $tshort->get_attribute_value("number",$anumber);
+												if($onum == $list_number){ ?>
+										<option disabled value ="<?php echo $onum; ?>"><?php echo $onum; ?></option>
+											<?php } 
+												else { ?>
+										<option value="<?php echo $anumber; ?>"><?php echo $list_number; ?></option>
+											<?php } } ?>
+                                    </select>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
