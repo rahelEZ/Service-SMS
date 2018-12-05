@@ -1,0 +1,5 @@
+This web application uses the template, AdminBSB. You can find how to install the template dependencies on the README file
+
+You can run this web-app using MAMMP or XAMMP. First set up the database by importing serviceSMS.sql. 
+index.php has the home page __ the login page
+the password for all users is 123456
